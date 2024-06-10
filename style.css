@@ -1,67 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 body {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-.container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
     background-image: linear-gradient(90deg, #000000, #000000);
-    /* background-image: linear-gradient(90deg, #161578, #b81055); */
 }
 
-.app-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.header {
     color: #fff;
-}
-
-.headings-container {
-    padding: 0 1rem;
-}
-
-.interaction-container {
-    display: flex;
-    align-items: normal;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 1rem;
+    display: flex;
+    font-size: xx-large;
+    padding-top: 2vh;
 }
-
+.container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+}
 .text-control {
-    width: 1485px;
-    height: 82vh;
+    font-size: large;
+    margin: 10px;
+    width: 80%;
+    height: 90%;
     padding: 0.5rem;
-    margin: 2rem 0;
-    background-color: #3f464a52;
+    background-color: #000000;
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 10px;
-}
-
-.text-control:focus-visible {
-    outline: none;
-}
-
-.error-para {
-    color: red;
+    resize: none;
 }
 
 .btn {
+    border: 2px solid #fff;
+    font-size: large;
+    height: fit-content;
+    width: 90%;
+    margin: 10px;
     padding: 0.8rem;
     background-image: linear-gradient(90deg, #473f3f, #3c2e2e);
-    /* background-image: linear-gradient(90deg, #F4244C, #F57D4E); */
-    border: 1px solid transparent;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
-    transition: all 0.25s;
+}
+.dropdown option {
+    font-size: large;
+    border: 2px solid white;
+    background-color: #3c2e2e;
+    color: #fff;
+}
+ul {
+    overflow: auto;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border: 2px solid #fff;
+    font-size: large;
+    height: 52vh;
+    width: 76%;
+    margin: 10px;
+    background-image: linear-gradient(90deg, #473f3f, #3c2e2e);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.textProp {
+    font-size: large;
+    color: #fff;
+}
+.voiceInfo {
+    cursor: pointer;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #473f3f, #3c2e2e);
+    border: 2px solid #fff;
+    margin: 10px;
+    padding: 0.8rem;
+}
+.hide {
+    display: none !important;
 }

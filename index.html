@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Reader</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Reader</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <div class="container">
-        <div class="app-container">
-            <div class="interaction-container">
-                <textarea id="textToConvert"
-                    placeholder="Enter text to convert into speech..."
-                    class="text-control">Click the play button to read this text</textarea>
+    <body>
+        <div class="header">
+            Reader
+        </div>
+        <div class="container">
+            <textarea
+                id="textToConvert"
+                placeholder="Enter text to convert into speech..."
+                class="text-control">Click the read button to read this text</textarea>
+            <div style="width: 20%;">
                 <button class="btn" id="convertBtn">
-                    Play Converted Sound
+                    Read
                 </button>
+                <select id="voiceDropdown" class="btn dropdown">
+                </select>
+                <h2 class="textProp voiceInfo hide">Available Voice List in your machine</h2>
+                <ul id="voiceList" class="hide">
+                </ul>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
-
