@@ -27,6 +27,11 @@ speechSynthesis.onvoiceschanged = loadVoiceOptions;
 
 convertBtn.addEventListener('click', function () {
     const speechSynth = window.speechSynthesis;
+    if(speechSynth.speaking) {
+        speechSynth.cancel();
+        convertBtn.textContent = "Read";
+        return;
+    }
     const enteredText = text.value.trim();
     if (!enteredText) {
         enteredText = "Please enter the text to read";
@@ -39,7 +44,7 @@ convertBtn.addEventListener('click', function () {
         if (selectedVoice) {
             newUtter.voice = selectedVoice;
             speechSynth.speak(newUtter);
-            convertBtn.textContent = "Reading...";
+            convertBtn.textContent = "Stop Reading...";
             newUtter.onend = () => {
                 convertBtn.textContent = "Read";
             };
